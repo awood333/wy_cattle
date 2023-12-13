@@ -77,8 +77,8 @@ class AgGridApp:
 
 
 if __name__ == "__main__":
-    agGridApp = AgGridApp()
-    agGridApp.app.run_server(port=8081, debug=True)  #, dev_tools_ui=True
+    aggApp = AgGridApp()
+    aggApp.app.run_server(port=8081, debug=True)  #, dev_tools_ui=True
     # server = agGridApp.setup_layout().server
     # server.run( host='0.0.0.0', port=8081, debug=True)
 
