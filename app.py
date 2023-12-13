@@ -4,6 +4,7 @@ from dash.dependencies import Input, Output
 import dash_ag_grid
 import pandas as pd
 
+
 class AgGridApp:
     def __init__(self):
         self.app = dash.Dash(__name__)
