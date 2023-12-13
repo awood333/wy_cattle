@@ -27,9 +27,9 @@ class AgGridApp:
 
             self.generate_dropdown('dropdown-id', [{'label': key, 'value': key} for key in self.dfs.keys()]),
 
-            self.generate_ag_grid('ag-grid-all', all1.columns, initial_data=all2,
+            self.generate_ag_grid('agg-all', all1.columns, initial_data=all2,
                                   style={'height': '400px', 'display': 'block'}),
-            self.generate_ag_grid('ag-grid-tenday', tenday1.columns, initial_data=tenday2,
+            self.generate_ag_grid('agg-tenday', tenday1.columns, initial_data=tenday2,
                                   style={'height': '400px', 'display': 'none'}),
 
             html.Div(id='debug-output')  # Add this line
@@ -54,8 +54,8 @@ class AgGridApp:
 
     def setup_callbacks(self):
         @self.app.callback(
-            [ Output('ag-grid-all', 'style'),  \
-             Output('ag-grid-tenday', 'style')
+            [ Output('agg-all', 'style'),  \
+             Output('agg-tenday', 'style')
             ], 
 
             [Input('dropdown-id', 'value')
